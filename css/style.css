@@ -1,0 +1,163 @@
+
+
+html, body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 1024px;
+    margin: auto;
+}
+
+.wrapper > nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    background-color: #112D4E;
+    color: #F9F7F7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.menu > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper > button {
+    background-color: #112D4E;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper > button > .icon-bars {
+    color: white;
+    font-size: 2rem;
+}
+
+.menu > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu {
+    width: 30%;
+    margin: 30px 0;
+}
+
+.bars {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.logo > i {
+    font-size: 3rem;
+}
+
+#profile {
+    background: url("../img/cover.jpg") no-repeat center;
+    background-size: cover;
+    height: 700px;
+    align-items: center;
+}
+
+.profile-container-opacity {
+    background-color: #112D4E;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.profile-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.profile-container > img {
+    width: 150px;
+    border-radius: 50%;
+    /*display: inline;*/
+}
+
+.profile-container > div {
+    margin: 0 0 0 30px;
+}
+
+.profile-container > div > h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container > div > p {
+    margin: 0;
+    padding: 0;
+}
+
+.skill-container {
+    height: 700px;
+    background-color: #3F72AF;
+}
+
+.project-container {
+    height: 700px;
+    background-color: #DBE2EF;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .menu {
+        /*display: none;*/
+    }
+
+    .menu > ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper > button {
+        display: inline;
+    }
+
+    .show > ul {
+        flex-direction: column;
+        background-color: #092635;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+    }
+}
