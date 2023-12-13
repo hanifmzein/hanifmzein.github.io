@@ -1,12 +1,14 @@
-const menuBar = document.querySelector('.menu');
-const bars = document.querySelector('.btn-bar');
+const menu = document.querySelector('.menu');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const iconBars = document.querySelector('.icon-bars');
+const iconXmark = document.querySelector('.icon-xmark');
+
+hamburgerMenu.addEventListener('click', showHide);
+
 function showHide(){
-    console.log('jalan');
-    if (menuBar.classList.contains('show')){
-        menuBar.classList.remove('show');
+    if (menu.classList.contains('show')){
+        menu.classList.remove('show');
     } else {
-        menuBar.classList.add('show');
+        menu.classList.add('show');
     }
 }
-
-bars.addEventListener('click', showHide);

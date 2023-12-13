@@ -1,25 +1,22 @@
-
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');*/
 
 html, body {
-    font-size: 16px;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
 
 .wrapper {
     width: 1024px;
     margin: auto;
-}
-
-.wrapper > nav {
-    display: flex;
-    justify-content: space-between;
+    padding: 0;
 }
 
 nav {
-    background-color: #112D4E;
-    color: #F9F7F7;
+    background-color: #092635;
+    color: white;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -32,37 +29,7 @@ nav > .wrapper {
     align-items: center;
 }
 
-.menu > ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-}
-
-.wrapper > button {
-    background-color: #112D4E;
-    border: none;
-    cursor: pointer;
-    display: none;
-}
-
-.wrapper > button > .icon-bars {
-    color: white;
-    font-size: 2rem;
-}
-
-.menu > ul > li > a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu {
-    width: 30%;
-    margin: 30px 0;
-}
-
-.bars {
+.hamburger-menu {
     background: none;
     border: none;
     color: white;
@@ -71,25 +38,54 @@ nav > .wrapper {
     display: none;
 }
 
+.hamburger-menu > .icon-xmark {
+    display: none;
+}
+
+.logo {
+    /*display: flex;*/
+}
+
 .logo > i {
     font-size: 3rem;
 }
 
-#profile {
-    background: url("../img/cover.jpg") no-repeat center;
-    background-size: cover;
+.menu {
+    width: 30%;
+    margin: 30px 0;
+}
+
+.menu > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
     height: 700px;
-    align-items: center;
+    background: url("../img/cover.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.profile-container-opacity {
-    background-color: #112D4E;
-    height: 100%;
+.header-opacity {
+    background-color: #092635;
     width: 100%;
-    opacity: 0.8;
+    height: 100%;
+    opacity: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.profile-container {
+.header-jumbotron {
     position: absolute;
     top: 0;
     left: 0;
@@ -98,57 +94,158 @@ nav > .wrapper {
     align-items: center;
     height: 100%;
     width: 100%;
+}
+
+.profile {
+    display: flex;
+}
+
+.foto {
+    /*height: 70px;*/
+}
+
+.foto > img {
+    height: 150px;
+    border-radius: 50%;
+}
+
+.desc {
+    margin: auto auto auto 20px;
+    color: white;
+    align-items: start;
+}
+
+.desc > h4 {
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.desc > p {
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.sosmed > i {
+    font-size: 1.8rem;
+    margin: 0 10px 0 0;
+}
+
+.button {
+    background-color: white;
+    color: #092635;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.17);
+}
+
+#skills {
+    background-color: #1B4242;
+    color: white;
+    padding: 70px 0;
+}
+
+#skills > .wrapper > h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 30px 0;
     color: white;
 }
 
-.profile-container > img {
-    width: 150px;
-    border-radius: 50%;
-    /*display: inline;*/
+.skill-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.profile-container > div {
-    margin: 0 0 0 30px;
+.skill-content > div {
+    text-align: center;
 }
 
-.profile-container > div > h2 {
+.skill-content > div > i {
+    font-size: 6rem;
+    display: block;
+    align-items: center;
+}
+
+.skill-content > div > span {
+    font-size: 1.8rem;
+    color: #9EC8B9;
     margin: 0;
-    padding: 0;
 }
 
-.profile-container > div > p {
+#project {
     margin: 0;
-    padding: 0;
+    padding: 30px 0 70px 0;
+    background-color: #5C8374;
 }
 
-.skill-container {
-    height: 700px;
-    background-color: #3F72AF;
+#project > .wrapper > h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 30px 0;
+    color: white;
 }
 
-.project-container {
-    height: 700px;
-    background-color: #DBE2EF;
+.grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 50px;
 }
 
-@media only screen and (max-width: 1024px) {
+.item {
+    background-color: #9EC8B9;
+    color: #1B4242;
+    border-radius: 10px;
+}
+
+.item > img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.item-detail > h3 {
+    margin: 3px 0;
+}
+
+.item-detail > p {
+    margin: 0;
+}
+
+.item-detail {
+    margin: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger-menu {
+        display: inline;
+    }
+
+    .menu {
+        display: none;
+    }
+
     .wrapper {
         width: 90%;
     }
 
-    .menu {
-        /*display: none;*/
-    }
-
-    .menu > ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between;
+    html, body {
         margin: 0;
         padding: 0;
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
     }
 
-    .wrapper > button {
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 50px;
+    }
+
+    .show {
         display: inline;
     }
 
@@ -157,7 +254,34 @@ nav > .wrapper {
         background-color: #092635;
         width: 100%;
         position: fixed;
-        top: 60px;
+        top: 90px;
         left: 0;
     }
+
+    .show > ul > li {
+        padding: 10px 20px 10px 20px;
+    }
 }
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 100%;
+    }
+
+    .skill-content > div > i {
+        font-size: 3rem;
+        display: block;
+        align-items: center;
+    }
+
+    .skill-content > div > span {
+        font-size: 1.2rem;
+        color: #9EC8B9;
+        margin: 0;
+    }
+
+    .skill-content > div {
+        flex-direction: column;
+    }
+}
+
